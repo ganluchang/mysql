@@ -2,6 +2,15 @@
 set -u
 set -e
 set -x
+#create dir
+mysql_port=3306
+mysql_tar_file=/opt/Percona-Server-5.7.11-4-Linux.x86_64.ssl101.tar
+mysql_base_dir=/usr/local/mysql
+mysql_data_dir=/data/mysql${mysql_port}
+
+mkdir -p /opt/mysql
+cd mysql
+tar -xvf /opt/ 
 #create mysql user
 if [[ `id mysql` && `groups mysql` ]]; then
 echo "mysql user or group already exist!"
