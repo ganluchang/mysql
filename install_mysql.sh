@@ -20,6 +20,9 @@ echo "create mysql group and user"
 groupadd mysql
 useradd -r -g mysql mysql -s /sbin/nologin -d /home/mysql -m
 fi
-#create mysql dir
-mkdir -p /data/mysql/mysql${mysql_port}{data,logs.tmp}
-mkdir -p /data/mysql/mysql${mysql_prot}/logs/mysql-bin
+#create mysql data,log dir.
+mkdir -p /data/mysql/mysql${mysql_port}{data,logs,tmp}
+mkdir -p /data/mysql/mysql${mysql_prot}/logs/bin-log
+mkdir -p /data/mysql/mysql${mysql_prot}/logs/relay-log
+
+#
