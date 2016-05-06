@@ -25,4 +25,3 @@ mkdir -p /data/mysql/mysql${mysql_port}{data,logs,tmp}
 mkdir -p /data/mysql/mysql${mysql_prot}/logs/bin-log
 mkdir -p /data/mysql/mysql${mysql_prot}/logs/relay-log
 
-#
